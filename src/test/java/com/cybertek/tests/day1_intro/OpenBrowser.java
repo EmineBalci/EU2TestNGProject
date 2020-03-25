@@ -6,6 +6,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import javax.swing.*;
+import javax.xml.transform.sax.SAXSource;
+
 public class OpenBrowser {
     public static void main(String[] args) {
 
@@ -16,9 +19,7 @@ public class OpenBrowser {
         // it is open what ever u type
         driver.get("https://cybertekschool.com");
 
-
-
-
+        System.out.println("test test");
 
     }
 
