@@ -5,6 +5,7 @@ import io.github.bonigarcia.wdm.ChromeDriverManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import javax.swing.*;
 import javax.xml.transform.sax.SAXSource;
@@ -21,6 +22,13 @@ public class OpenBrowser {
 
         System.out.println("test test");
 
+//        //firefox navigation
+//
+//        WebDriverManager.firefoxdriver().setup();
+//
+//        WebDriver driver = new FirefoxDriver();
+//
+//        driver.get("https://amazon.com");
     }
 
 }
