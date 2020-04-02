@@ -23,15 +23,21 @@ public class verifyConfirmationMessage {
         Faker faker = new Faker();
         String expectedEmail = faker.internet().emailAddress();
 
+        // webelemnt locate i findElement() ile yapıyorz , by name, id ler bizim locaterımız
+        // if there is no id , just put By.name
         WebElement emailInputBox = driver.findElement(By.name("email"));
+        // send enter mail in this element location
         emailInputBox.sendKeys(expectedEmail);
+
         Thread.sleep(3000);
+
         // GET TEXT From WebElements: There are 2 WAY;
         // 1. GET.TEXT()::     we can get from here
         //String text= emailInputBox.getText();  // but it is noot WORK for input box!
 
         // 2. getAttribute("value")::
-        String actualEmail = emailInputBox.getAttribute("value");  // value is the attribute to call entered data, whatever user enter
+        String actualEmail = emailInputBox.getAttribute("value");
+        // value is the attribute to call entered data, whatever user enter
 
         // verify test
         if (actualEmail.equals(expectedEmail)){

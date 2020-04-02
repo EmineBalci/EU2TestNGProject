@@ -28,6 +28,7 @@ public class GetTitleAndUrl {
         // get Source code  all html codes
         String pageSource = driver.getPageSource();
         System.out.println("pageSource = " + pageSource);
+
     }
 
 }
