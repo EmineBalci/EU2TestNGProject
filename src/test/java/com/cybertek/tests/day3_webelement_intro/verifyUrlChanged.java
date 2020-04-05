@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 
 public class verifyUrlChanged {
     public static void main(String[] args) throws InterruptedException {
-        /**
+        /*
          * open chrome browser
          * go to http://practice.cybertekschool.com/forgot_password Links to an external site.
          * enter email
@@ -18,8 +18,8 @@ public class verifyUrlChanged {
         WebDriver driver = WebDriverFactory.getDriver("chrome");
         driver.get("http://practice.cybertekschool.com/forgot_password");
 
-       // String currentUrl = driver.getCurrentUrl();
 
+       // String currentUrl = driver.getCurrentUrl();
         WebElement enterEmail = driver.findElement(By.name("email"));
         Faker mail = new Faker();
         String emailRndm= mail.internet().emailAddress();
