@@ -1,6 +1,7 @@
 package com.cybertek.tests.day1_intro;
 
 
+import com.cybertek.utilities.WebDriverFactory;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -29,6 +30,11 @@ public class OpenBrowser {
 //        WebDriver driver = new FirefoxDriver();
 //
 //        driver.get("https://amazon.com");
+
+
+        driver.quit();
+
+
     }
 
 }
