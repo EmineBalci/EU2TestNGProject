@@ -5,6 +5,7 @@ public class BeforeAfterTests {
     @BeforeMethod
     public  void setUp(){
         // WebDriver Part * this run FIRST for each of Test Anotation!!!!!
+        //
         System.out.println("BEFORE METHOD HERE");
         System.out.println("WebDriver Part");
     }

@@ -1,7 +1,11 @@
 package com.cybertek.tests;
 
+import com.cybertek.utilities.WebDriverFactory;
 import com.github.javafaker.CreditCardType;
 import com.github.javafaker.Faker;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class FirstClass {
     public static void main(String[] args) {
@@ -19,6 +23,8 @@ public class FirstClass {
         System.out.println("hi");
         System.out.println("hi"); //cntrl + d  copy line
 
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
 
 
     }
