@@ -39,7 +39,7 @@ public class SelectClassTest {
     }
 
     @Test
-    public void test2() {
+    public void test2() throws InterruptedException {
 
         driver.get("http://practice.cybertekschool.com/dropdown");
 
@@ -53,15 +53,41 @@ public class SelectClassTest {
         // Verify that first selection is "Select a State"
 
         String expectedOption = "Select a State";
-        String actualSelection = stateDropdown.getFirstSelectedOption().getText();
+        String actualOption = stateDropdown.getFirstSelectedOption().getText();
 
-        Assert.assertEquals(actualSelection,expectedOption,"Verify first selections");
+        Assert.assertEquals(actualOption,expectedOption,"Verify first selections");
+
+        // How to select options from dropdown?
+        // 1.way= select using visible text
+        Thread.sleep(2000);
+        stateDropdown.selectByVisibleText("Texas");
+        expectedOption = "Texas";
+        actualOption = stateDropdown.getFirstSelectedOption().getText();
+        Assert.assertEquals(expectedOption,actualOption);
+        Thread.sleep(2000);
+
+
+        // 2. Way: Select USING Index
+        stateDropdown.selectByIndex(51); // toplamda 52 tane var sonuncu 51. index
+        expectedOption = "Wyoming";
+        Thread.sleep(2000);
+        actualOption = stateDropdown.getFirstSelectedOption().getText();
+        Assert.assertEquals(expectedOption,actualOption);
+
+        // 3. Way :Selecet by value;
+        stateDropdown.selectByValue("DC");
+        expectedOption = "District Of Columbia";
+        Thread.sleep(2000);
+        actualOption = stateDropdown.getFirstSelectedOption().getText();
+        Assert.assertEquals(expectedOption,actualOption);
+
+
 
 
     }
 
     @AfterMethod
     public void after(){
-        //driver.quit();
+        driver.quit();
     }
 }
