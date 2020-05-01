@@ -74,7 +74,7 @@ public class SelectClassTest {
         actualOption = stateDropdown.getFirstSelectedOption().getText();
         Assert.assertEquals(expectedOption,actualOption);
 
-        // 3. Way :Selecet by value;
+        // 3. Way :Select by value;
         stateDropdown.selectByValue("DC");
         expectedOption = "District Of Columbia";
         Thread.sleep(2000);

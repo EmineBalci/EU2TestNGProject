@@ -67,7 +67,7 @@ public class iframes {
     public void test2(){
         driver.get("http://practice.cybertekschool.com/nested_frames");
         // we have 6 html in this web site!!
-
+        // FRAME SET örneği ,2 anda frame ve alt frame leri mevcut
         /* main HTML ..///Default
                 frame-top ..child sibilings  /// parent
                   index- 0  left    ..sibilings - grand child   ///child
