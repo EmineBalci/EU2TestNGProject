@@ -41,7 +41,7 @@ public class HoverTest {
         Actions actions = new Actions(driver);
 
         // img = driver.findElement(By.xpath("(//img)[1]"));
-        // actions.moveToElement(img);
+        // actions.moveToElement(img).perform();
         // name = driver.findElement(By.xpath("(//h5)[1]"));
         // String actualName= name.getText();
         // String expectedName = "name: user1";
@@ -49,7 +49,7 @@ public class HoverTest {
 
         for (int i=1; i<=3; i++){
             img = driver.findElement(By.xpath("(//img)["+i+"]"));
-            actions.moveToElement(img);
+            actions.moveToElement(img).perform();
             name = driver.findElement(By.xpath("(//h5)["+i+"]"));
             String actualName= name.getText();
             String expectedName = "name: user"+i;

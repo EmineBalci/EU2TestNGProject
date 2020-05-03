@@ -50,7 +50,7 @@ public class ActionsTest {
 
         WebElement link = driver.findElement(By.linkText("View profile"));
         Assert.assertTrue(img.isDisplayed());
-
+      
     }
 
     @Test
