@@ -123,6 +123,12 @@ public class WebTablesExample {
 
     }
 
+    @Test
+    public void getCelInRelationToAnotherCellInSameRow(){
+        String firstName= "John";
+        String xpath = "//table[@id='table1']//td[.='"+firstName+"']/../td[3]"; // 3 is for email
+    }
+
     private int getNumOfColumns() {
         List<WebElement> headers = driver.findElements(By.xpath("//table[@id='table1']//th"));
         return headers.size();
